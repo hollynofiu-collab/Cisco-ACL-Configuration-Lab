@@ -26,6 +26,35 @@ The Router-on-a-Stick configuration provides inter-VLAN routing, while the ACL i
 
 ## Configuration
 
-![Configuration](https://github.com/hollynofiu-collab/Router-On-a-Stick-Lab/tree/main/Screenshots)
+![Configuration](https://github.com/hollynofiu-collab/Cisco-ACL-Configuration-Lab/blob/main/Configuration.txt)
+
+## Testing/Verification.
+
+The ACL was tested from PC3 to verify that the configured traffic policy
+was being enforced.
+
+### Test 1 — Permitted Traffic
+
+PC3 successfully communicated with `192.168.30.22`.
+
+- Packets sent: 4
+- Packets received: 4
+- Packet loss: 0%
+
+This confirms that traffic not matching the deny rule was permitted.
+
+### Test 2 — Denied Traffic
+
+PC3 attempted to communicate with `192.168.40.3`.
+
+- Packets sent: 4
+- Packets received: 0
+- Packet loss: 100%
+
+The traffic was blocked because the source network
+`192.168.20.0/24` is denied access to the destination network
+`192.168.40.0/24` by ACL 100.
+
+![ACL Traffic Testing](screenshots/acl-traffic-testing.png)
 
 
