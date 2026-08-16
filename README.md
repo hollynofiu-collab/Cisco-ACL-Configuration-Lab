@@ -24,3 +24,8 @@ The primary focus of this project is ACL configuration, traffic filtering, and v
 The ACL was configured on the router within a segmented VLAN environment.
 The Router-on-a-Stick configuration provides inter-VLAN routing, while the ACL introduces traffic-control policies between the network segments.
 
+## Configuration
+
+![Configuration](https://github.com/hollynofiu-collab/Router-On-a-Stick-Lab/tree/main/Screenshots)
+
+
