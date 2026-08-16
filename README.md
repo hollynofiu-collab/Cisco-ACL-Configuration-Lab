@@ -55,6 +55,6 @@ The traffic was blocked because the source network
 `192.168.20.0/24` is denied access to the destination network
 `192.168.40.0/24` by ACL 100.
 
-![ACL Traffic Testing](screenshots/acl-traffic-testing.png)
+![ACL Traffic Testing](https://github.com/hollynofiu-collab/Cisco-ACL-Configuration-Lab/tree/main/Screenshots)
 
 
