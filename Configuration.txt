@@ -1,0 +1,35 @@
+! ==========================================
+! Cisco ACL Configuration
+!ACL 100
+! ==========================================
+
+! Deny VLAN 20 from accessing VLAN 40
+access-list 100 deny ip 192.168.20.0 0.0.0.255 192.168.40.0 0.0.0.255
+
+What it means: Block IP traffic originating from 192.168.20.0/24 network and destined for the 192.168.40/24 network.
+
+
+! Permit all other traffic
+access-list 100 permit ip any any
+
+! Apply ACL to the appropriate interface
+interface FastEthernet0/0.2
+ip access-group 100 in
+
+VERIFICATION.
+
+TEST 1
+
+Source: VLAN 20
+Destination: VLAN 40
+EXPECTED: Denied.
+
+TEST 2
+
+Source: VLAN 20
+Destination: VLAN 10
+Expected: Permitted.
+
+
+
+
